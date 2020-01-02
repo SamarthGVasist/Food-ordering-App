@@ -1,0 +1,26 @@
+<html> 
+<head>   
+<script type = "text/javascript">         
+function WriteCookie() 
+{ 
+var now = new Date(); 
+now.setMinutes( now.getMinutes() + 1 ); 
+cookievalue = escape(document.myform.customer.value) + ";"               
+document.cookie= "name=" + cookievalue; document.cookie+= "; expires=" + now.toUTCString() + ";"     
+alert("cookie is set and will die after one min"); }         
+function getcookie()
+{
+	document.write(document.cookie);
+}
+
+</script>      
+</head>   
+<body> 
+	<form name = "myform" action = ""> 
+		Enter name: <input type = "text" name = "customer"/> 
+		<input type = "button" value = "Set Cookie" onclick = "WriteCookie()"/> 
+		<input type = "button" value = "Get Cookie" onclick = "getcookie()"/> 
+	</form>      
+
+</body> 
+</html> 
